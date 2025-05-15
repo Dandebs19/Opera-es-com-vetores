@@ -1,0 +1,33 @@
+while True:
+    dimensao = float(input("Digite 2 para vetor 2D ou 3 para vetor 3D:" ))
+    if dimensao == 2 or dimensao == 3:
+        break
+    else:
+        print("Digite um valor válido.")
+   
+try:    
+    if dimensao == 2:
+        x1,y1 = map(float, input("Digite o primeiro vetor(Separe com espaços).").split())
+        x2,y2 = map(float, input("Digite o segundo vetor(Separe com espaços).").split())
+      
+    else:
+        x1,y1,z1 = map(float, input("Digite o primeiro vetor.").split())
+        x2,y2,z2 = map(float, input("Digite o segundo vetor.").split())
+
+except:
+    print("Digite vetores válidos.")
+
+while True:
+    operacao = input("Escolha soma(+) ou subtração(-)")
+    if operacao == '+':
+        if dimensao == 2:
+            print(f'({x1 + x2},{y1+y2})')
+        else:
+            print(f'({x1 + x2},{y1 + y2},{z1 + z2})')   
+    elif operacao == "-":        
+        if dimensao == 2:
+            print(f'({x1 - x2},{y1 - y2})')
+        else:
+            print(f'({x1 - x2},{y1 - y2},{z1 - z2})')
+    else:
+        print('Digite um operador válido(+/-) ')
